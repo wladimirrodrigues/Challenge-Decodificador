@@ -1,4 +1,8 @@
-// scrip.js
+//Adciona um evento que recarrega a pagina ao clicar no logo
+document.getElementById("logo").addEventListener("click", function () {
+  // Recarrega a página ao clicar no logo
+  location.reload();
+});
 function limparFrase() {
   var textarea = document.getElementById("frase");
   if (textarea.value === "Digite uma frase") {
@@ -120,4 +124,41 @@ function descriptografarFrase(fraseCriptografada) {
 function removerAcentos(str) {
   // Remove acentos utilizando expressão regular
   return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+// Função para colar mensagem criptografada no textarea
+function colarMensagemCriptografada() {
+  // Obtém a mensagem criptografada da área de transferência
+  navigator.clipboard
+    .readText()
+    .then(function (mensagemCriptografada) {
+      // Define a mensagem criptografada no textarea
+      document.getElementById("frase").value = mensagemCriptografada;
+    })
+    .catch(function (err) {
+      console.error("Erro ao colar mensagem criptografada: ", err);
+    });
+}
+
+// Adiciona um evento de clique ao botão "Descriptografar"
+document
+  .getElementById("botaoDescriptografar")
+  .addEventListener("click", descriptografar);
+
+// Modifica a função descriptografar para ser chamada sem parâmetros
+function descriptografar() {
+  // Obtém a frase criptografada do elemento h2
+  var h2MensagemCriptografada = document.querySelector(
+    ".fraseCripotografada h2"
+  );
+  var fraseCriptografada = h2MensagemCriptografada.textContent;
+
+  // Descriptografa a frase
+  var fraseDescriptografada = descriptografarFrase(fraseCriptografada);
+
+  // Atualiza a mensagem no textarea
+  document.getElementById("frase").value = fraseDescriptografada;
+
+  // Atualiza a mensagem na div com a classe "fraseCripotografada"
+  h2MensagemCriptografada.textContent = fraseDescriptografada;
 }

@@ -21,6 +21,7 @@ header {
 .imgIcone {
   width: 7.5rem;
   padding: 2.5rem;
+  cursor: pointer;
 }
 .container {
   padding: 2% 13%;
@@ -87,24 +88,25 @@ header {
   border-radius: 32px;
 }
 
-.fraseCripotografada h2 {
+.fraseCripotografada {
   padding: 10px;
+  justify-content: space-between;
 }
-button#botaoCopiar {
+#botaoCopiar {
   display: block;
   margin: 0 auto;
   background-color: var(--cor-fontes);
-  align-items: flex-end;
   color: var(--cor-terciaria);
-  padding: 10px 40px;
+  padding: 20px 60px;
   border: none;
-  border-radius: 10px;
+  border-radius: 30px;
   cursor: pointer;
+  font-size: 20px;
   margin-top: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
 }
-
-button#botaoCopiar:hover {
+#botaoCopiar:hover {
   background-color: #6c8af3;
 }
 
