@@ -119,6 +119,7 @@ header {
   padding: 20px;
 }
 .footer p {
+  color: var(--cor-fontes);
   font-size: 1.25rem;
   font-weight: bold;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
