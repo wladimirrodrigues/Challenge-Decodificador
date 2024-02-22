@@ -28,6 +28,7 @@ header {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
+  margin-bottom: 1.5rem;
 }
 .textoEntrada {
   width: 60%;
