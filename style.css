@@ -16,7 +16,7 @@ header {
   display: block;
 }
 .cabecaçho {
-  width: 20%;
+  width: 100%;
 }
 .imgIcone {
   width: 7.5rem;
@@ -27,23 +27,25 @@ header {
   padding: 2% 13%;
   display: flex;
   justify-content: space-between;
-  gap: 30px;
+  gap: 2rem;
 }
 .textoEntrada {
+  width: 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 21rem;
+  gap: 20rem;
 }
 .textarea {
-  width: 700px;
+  width: 70%;
   height: 200px;
   padding: 20px;
-  font-size: 30px;
+  font-size: 2rem;
   font-family: Arial, sans-serif;
   background-color: var(--cor-body);
   border: none;
   color: var(--cor-fontes);
+  resize: none;
 }
 .textarea:focus {
   box-shadow: 0 0 5px rgba(105, 121, 173, 0.418);
@@ -61,7 +63,7 @@ header {
 .botoes button {
   padding: 20px 60px;
   border-radius: 50px;
-  font-size: 20px;
+  font-size: 1.25rem;
   cursor: pointer;
 }
 .botaoCriptografar {
@@ -101,7 +103,7 @@ header {
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 1.25rem;
   margin-top: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: 0.2s;
@@ -116,8 +118,69 @@ header {
   padding: 20px;
 }
 .footer p {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: bold;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+@media only screen and (max-width: 1170px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 3%;
+  }
+
+  .textoEntrada {
+    width: 100%;
+    gap: 3rem;
+  }
+
+  .textarea {
+    width: 90%;
+  }
+  .teste {
+    width: 90%;
+    text-align: center;
+  }
+  .botoes {
+    gap: 10px;
+  }
+
+  .botoes button {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .textoSaida {
+    padding: 2rem;
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+  .textoSaida img {
+    display: none;
+  }
+  .fraseCripotografada h2 {
+    text-align: center;
+    margin: 10px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .textoSaida {
+    margin-bottom: 3rem;
+  }
+  .atencao {
+    width: 100%;
+    text-align: center;
+  }
+  .botoes {
+    gap: 2rem;
+    flex-direction: column;
+  }
+  .footer {
+    padding: 1rem;
+  }
+  .footer p {
+    font-size: 1rem;
+  }
 }
