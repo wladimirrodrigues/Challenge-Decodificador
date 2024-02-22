@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width= , initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Challenge-Decodificador</title>
+</head>
+
+<body>
+  <header class="cabecalho">
+    <img class="imgIcone" src="img/Frame 6.png" alt="">
+  </header>
+  <main class="container">
+    <section class="textoEntrada">
+      <textarea class="textarea" onclick="limparFrase()" onblur="restaurarFrase()" id="frase" type="text">Digite uma frase</textarea>
+
+      <div>
+        <div class="atencao">
+          <img src="img/bi_exclamation-circle-fill.png" alt="">
+          <p>Apenas letras minúsculas e sem acento.</p>
+        </div>
+        <div class="botoes">
+          <button class="botaoCriptografar" onclick="criptografar()">Criptografar</button>
+          <button class="botaoDescriptografar" onclick="descriptografar()">Descriptografar</button>
+        </div>
+      </div>
+      </div>
+
+    </section>
+
+    <section class="textoSaida">
+      <div class="fraseCripotografada">
+        <img src="img/High quality products 1 1.svg" alt="">
+        <h2 id="mensagemCriptografada">Nenhuma mensagem encontrada</h2>
+        <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Desenvolvido por Wladimir da Silva </p>
+  </footer>
+  <script src="scrip.js"></script>
+</body>
+
+</html>

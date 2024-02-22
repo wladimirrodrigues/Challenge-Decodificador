@@ -1,0 +1,121 @@
+:root {
+  --cor-body: #dde0ec;
+  --cor-fontes: #5d6dac;
+  --cor-terciaria: #fff;
+  --cor-footer: #bfc9ec;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: var(--cor-body);
+}
+header {
+  display: block;
+}
+.cabecaçho {
+  width: 20%;
+}
+.imgIcone {
+  width: 7.5rem;
+  padding: 2.5rem;
+}
+.container {
+  padding: 2% 13%;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.textoEntrada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 21rem;
+}
+.textarea {
+  width: 700px;
+  height: 200px;
+  padding: 20px;
+  font-size: 30px;
+  font-family: Arial, sans-serif;
+  background-color: var(--cor-body);
+  border: none;
+  color: var(--cor-fontes);
+}
+.textarea:focus {
+  box-shadow: 0 0 5px rgba(105, 121, 173, 0.418);
+  outline: none;
+}
+.atencao {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+.botoes {
+  display: flex;
+  gap: 40px;
+}
+.botoes button {
+  padding: 20px 60px;
+  border-radius: 50px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.botaoCriptografar {
+  background: var(--cor-fontes);
+  color: var(--cor-terciaria);
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.botaoDescriptografar {
+  background: var(--cor-terciaria);
+  color: var(--cor-fontes);
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.textoSaida {
+  background: var(--cor-terciaria);
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 32px;
+}
+
+.fraseCripotografada h2 {
+  padding: 10px;
+}
+button#botaoCopiar {
+  display: block;
+  margin: 0 auto;
+  background-color: var(--cor-fontes);
+  align-items: flex-end;
+  color: var(--cor-terciaria);
+  padding: 10px 40px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button#botaoCopiar:hover {
+  background-color: #6c8af3;
+}
+
+.footer {
+  background: var(--cor-footer);
+  text-align: center;
+  padding: 20px;
+}
+.footer p {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
